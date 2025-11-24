@@ -193,13 +193,13 @@ class _NewsFormPageState extends State<NewsFormPage> {
                                 child: const Text('OK'),
                                 onPressed: () {
                                   Navigator.pop(context);
+                                  _formKey.currentState!.reset();
                                 },
                               ),
                             ],
                           );
                         },
                       );
-                      _formKey.currentState!.reset();
                     }
                   },
                   child: const Text(
@@ -210,8 +210,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
               ),
             ),
           ],
-
-
 
       )
         ),

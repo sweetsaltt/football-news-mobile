@@ -37,8 +37,8 @@ class LeftDrawer extends StatelessWidget {
                 )
               ],
             )
-
           ),
+
           // Bagian routing
           ListTile(
             leading: const Icon(Icons.home_outlined),
@@ -49,6 +49,13 @@ class LeftDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => MyHomePage()),
               );
+
+              ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(
+                    SnackBar(
+                        content: Text('Kamu berada di halaman Home'))
+                );
             },
           ),
 
@@ -61,6 +68,13 @@ class LeftDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => NewsFormPage()),
               );
+
+              ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(
+                    SnackBar(
+                        content: Text('Kamu telah menekan tombol Add News'))
+                );
             },
           )
         ],
