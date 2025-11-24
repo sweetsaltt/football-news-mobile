@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:football_news/newslist_form.dart';
+import 'package:football_news/screens/newslist_form.dart';
 import 'package:football_news/widgets/left_drawer.dart'; // import drawer widget
 
 class MyHomePage extends StatelessWidget {
